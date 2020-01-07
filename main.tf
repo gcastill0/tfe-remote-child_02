@@ -9,7 +9,7 @@ data "terraform_remote_state" "rstate" {
     organization = "${var.TFE_ORG}"
     token        = "${var.TFE_TOKEN}"
     workspaces = {
-      name = "tfe-remote-parent"
+      name = "TerraformExperimentation/tfe-remote-parent"
     }
   }
 }
