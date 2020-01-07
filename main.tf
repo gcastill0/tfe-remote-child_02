@@ -6,7 +6,7 @@ data "terraform_remote_state" "rstate" {
   backend = "atlas"
   config = {
     address = "${var.TFE_HOST}"
-    name    = "${var.TFE_ORG}/tfe-remote-parent"
+    name    = "TerraformExperimentation/tfe-remote-parent"
   }
 }
 
