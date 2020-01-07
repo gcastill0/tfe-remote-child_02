@@ -5,12 +5,8 @@ variable "TFE_TOKEN" {}
 data "terraform_remote_state" "rstate" {
   backend = "atlas"
   config = {
-    hostname     = "${var.TFE_HOST}"
-    organization = "${var.TFE_ORG}"
-    token        = "${var.TFE_TOKEN}"
-    workspaces = {
-      name = "TerraformExperimentation/tfe-remote-parent"
-    }
+    address = "${var.TFE_HOST}"
+    name    = "${var.TFE_ORG}/tfe-remote-parent"
   }
 }
 
