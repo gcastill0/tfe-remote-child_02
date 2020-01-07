@@ -3,7 +3,7 @@ variable "TFE_ORG" {}
 variable "TFE_TOKEN" {}
 
 data "terraform_remote_state" "rstate" {
-  backend = "remote"
+  backend = "atlas"
   config = {
     hostname     = "${var.TFE_HOST}"
     organization = "${var.TFE_ORG}"
