@@ -6,7 +6,7 @@ data "terraform_remote_state" "rstate" {
   backend = "atlas"
   config = {
     address = "${var.TFE_HOST}"
-    name    = "${TFE_ORG}/${TFE_WRK}"
+    name    = "${var.TFE_ORG}/${var.TFE_WRK}"
   }
 }
 
