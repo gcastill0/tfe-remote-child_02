@@ -21,8 +21,8 @@ provider "azurerm" {
 }
 
 # Create a virtual network within the resource group
-resource "azurerm_virtual_network" "child_01" {
-  name                = "child_01_network"
+resource "azurerm_virtual_network" "child_02" {
+  name                = "child_02_network"
   resource_group_name = data.terraform_remote_state.rstate.outputs.azure_resource_group_name
   location            = data.terraform_remote_state.rstate.outputs.azure_resource_group_location
   address_space       = ["10.0.0.0/16"]
